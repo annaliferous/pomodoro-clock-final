@@ -4,6 +4,8 @@ import Settings from './Settings';
 import Times from './Times';
 import Controller from './Controller';
 import './App.css';
+//import Popup from 'reactjs-popup';
+import PopUp  from './PopUp';
 
 export default class App extends Component {
   constructor(props) {
@@ -163,6 +165,9 @@ export default class App extends Component {
           size="120px"
           ariaLabel="View source on Github"
         />
+
+      <PopUp/>
+        
       </div>
     );
   }
