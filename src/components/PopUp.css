@@ -39,6 +39,9 @@
     padding: 5px 5px;
     font-size: 1.1rem;
     color: #444;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-around;
 }
 
 

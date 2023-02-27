@@ -154,7 +154,7 @@ export default class App extends Component {
           isStart={this.state.isStart}
         />
 
-        <audio id="beep" preload="auto" src="https://goo.gl/65cBl1" ref={this.audioBeep}></audio>
+        <audio id="beep" preload="auto" src="./Sounds/harp-motif2-36586.mp3" ref={this.audioBeep}></audio>
         <footer>Designed based on a pen by <a href="https://codepen.io/eddyerburgh/full/yOjdqo/">Edd Yerburgh</a> and coded by <a href="http://about.phamvanlam.com">Lam Pham</a>.</footer>
 
         <FolkMe
