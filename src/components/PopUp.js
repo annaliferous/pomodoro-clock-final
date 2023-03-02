@@ -15,7 +15,7 @@ export default class PopUp extends Component{
                     <div className="header"> Choose a skill! </div>
                     
                     <div className='skills'>
-                        <button className='button' id='btn1' onClick={(e) => {e.preventDefault(); window.open('./Skills/Breathe/breathe.html');}}> Work </button>
+                        <button className='button' id='btn1' onClick={(e) => {e.preventDefault(); window.open('./Skills/Breathe/breathe.html');}}>Breathe <br></br><font size="3">An exercise to help you to calm down</font></button>
                         <button className='button' id='btn2' onClick={(e) => {e.preventDefault(); window.open('./Skills/js-expanding-cards/index.html');}} 
                         /*onClick={window.open("./Skills/Breathe/index.html", "_blank")}*/
                         /*window.location.assign("./Skills/Breathe/breathe.html")*/ > Work </button>
