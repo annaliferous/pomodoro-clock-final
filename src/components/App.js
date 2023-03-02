@@ -6,15 +6,28 @@ import Controller from './Controller';
 import './App.css';
 //import Popup from 'reactjs-popup';
 import PopUp  from './PopUp';
-import Notification from './Notification';
 
 
+function showNotification() {
+  let title = "Times up!!"
+  let body = "It's time to take a break!"
+  let notification = new Notification(title, {body});
+  notification.onclick = function(){
+  window.parent.focus();
+  notification.close();
+}
+}
 export default class App extends Component {
+  
+  
+
   constructor(props) {
     super(props);
 
-    this.audioBeep = React.createRef();
+    
 
+    this.audioBeep = React.createRef();
+    
 
     this.state = {
       breakLength: Number.parseInt(this.props.defaultBreakLength, 10),
@@ -114,7 +127,10 @@ export default class App extends Component {
   phaseControl() {
     if (this.state.timeLeftInSecond === 0) {
       this.audioBeep.current.play();
-      
+      showNotification();
+
+
+
 
     } else if (this.state.timeLeftInSecond === -1) {
       if (this.state.timeLabel === 'Session') {
@@ -173,7 +189,7 @@ export default class App extends Component {
           ariaLabel="View source on Github"
         />
 
-      
+
         
       </div>
     );

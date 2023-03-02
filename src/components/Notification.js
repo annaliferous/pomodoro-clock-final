@@ -1,12 +1,33 @@
-import React from 'react';
-import {NotificationContainer, NotificationManager} from 'react-notifications';
-import 'react-notifications/lib/notifications.css';
 
-class Notification extends React.Component {
-    createNotification = _ => {
-      return () => {
-        NotificationManager.info('Info message'); 
-      };
-    };
+
+
+let permission = Notification.permission;
+  if (permission == "granted") {
+    showNotification();
+  } else if (permission = "default") {
+    requestAndShowNotification();
+  } else{
+    alert("Take a break!")
+  }
+
+function showNotification() {
+    let title = "Times up!!"
+    let body = "It's time to take a break!"
+    let notification = new Notification(title, {body});
+    notification.onclick = function(){
+    window.parent.focus();
+    notification.close();
+  }
 }
-export default Notification;
+
+function requestAndShowNotification() {
+  Notification.requestPermission(function (permission) {
+    if (permission === "granted") {
+      showNotification();
+    }
+  });
+}
+
+
+
+
