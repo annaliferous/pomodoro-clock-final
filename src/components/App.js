@@ -8,15 +8,30 @@ import './App.css';
 import PopUp  from './PopUp';
 
 
-function showNotification() {
+function showBreakNotification() {
   let title = "Times up!!"
-  let body = "It's time to take a break!"
-  let notification = new Notification(title, {body});
+  let notification = new Notification(title, 
+    {body: "It's time to take a break!", 
+     icon: './notification_break.jpg'
+  });
   notification.onclick = function(){
   window.parent.focus();
   notification.close();
+  }
 }
+
+function showWorkNotification() {
+  let title = "Times up!!"
+  let notification = new Notification(title, 
+    {body: "It's time to go back to work!", 
+     icon: './notification_work.jpg'
+  });
+  notification.onclick = function(){
+  window.parent.focus();
+  notification.close();
+  }
 }
+
 export default class App extends Component {
   
   
@@ -127,22 +142,22 @@ export default class App extends Component {
   phaseControl() {
     if (this.state.timeLeftInSecond === 0) {
       this.audioBeep.current.play();
-      showNotification();
-
-
-
 
     } else if (this.state.timeLeftInSecond === -1) {
       if (this.state.timeLabel === 'Session') {
         this.setState({
           timeLabel: 'Break',
           timeLeftInSecond: this.state.breakLength * 60
+          
         });
+        showBreakNotification();
+
       } else {
         this.setState({
           timeLabel: 'Session',
           timeLeftInSecond: this.state.sessionLength * 60
         });
+        showWorkNotification()
       }
     }
   }

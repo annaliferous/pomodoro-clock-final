@@ -24,7 +24,7 @@ export default class PopUp extends Component{
                         <tr>
                         <td><button className='button' id='btn4' onClick={(e) => {e.preventDefault(); window.open('./Skills/circles/circles.html');}}> Circles <br></br><font size="3">Create circles and watch them wander.</font></button></td>
                         <td><button className='button' id='btn6' onClick={(e) => {e.preventDefault(); window.open('./Skills/invaders/invaders.html');}}> Space Invaders <br></br><font size="3">You know it! You love it!<br></br> Enjoy it!</font></button></td>
-                        <td><button className='button' id='btn6' onClick={(e) => {e.preventDefault(); window.open('./Skills/paint-by-numbers/index.html');}}> Paint by numbers <br></br><font size="3">A complete picture, one square at a time.</font></button></td>
+                        <td><button className='button' id='btn6' onClick={(e) => {e.preventDefault(); window.open('./Skills/jumping_frogs/index.html');}}> Jumping Frogs <br></br><font size="3">Make these adorble frogs jump to solve the puzzle!</font></button></td>
                         </tr>
                         <tr>
                         <td><button className='button' id='btn7' onClick={(e) => {e.preventDefault(); window.open('./Skills/tether/index.html');}}> Thether <br></br><font size="3">You need to let out some energy? Look no further!</font></button></td>
