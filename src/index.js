@@ -7,7 +7,7 @@ import registerServiceWorker from './registerServiceWorker';
 ReactDOM.render(<App 
   githubURL="https://github.com/completejavascript/pomodoro-clock" 
   defaultBreakLength='5' 
-  defaultSessionLength='20' />, 
+  defaultSessionLength='35' />, 
   document.getElementById('root')
 );
 
