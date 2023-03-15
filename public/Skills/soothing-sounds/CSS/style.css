@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Comforter+Brush&display=swap");
+
+body {
+  background: linear-gradient(-45deg, #19b893, #069271,#9d60ff, #f869fd );
+  /* background-color: #19b893; */
+
+  background-size: 400% 400%;
+  animation: gradient 5s ease infinite;
+  /* height: 100vh; */
+  font-family: "Poppins", sans-serif;
+}
+header {
+  text-align: center;
+  padding: 10px;
+  /* color: #eee; */
+  font-size: 3vw;
+}
+header h1 {
+  letter-spacing: 3px;
+  font-weight: 800;
+}
+header h4 {
+  font-weight: 500;
+}
+/* Container Info Text */
+.info-container {
+  text-align: center;
+  /* background-color: #23a6d5; */
+  padding: 20px;
+  font-size: 18px;
+  font-weight: 400;
+  /* color: #fff; */
+}
+
+.sounds-container {
+  margin-top: 40px;
+  /* color: #fff; */
+  letter-spacing: 2px;
+  font-weight: 400;
+  /* background-color: yellowgreen; */
+}
+.sounds-row {
+  padding: auto;
+  /* background-color: blue; */
+}
+.sound-icon {
+  background: rgba(200, 200, 200, .2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  margin: 20px;
+  text-align: center;
+  transition: all .3s ease-in-out;
+  /* cursor: pointer; */
+}
+.active-div{
+  background: rgba(255, 255, 255, 0.8);
+
+}
+.sound-icon img {
+  width: 100px;
+}
+button{
+  background-color: transparent;
+  border: none;
+  margin: 10px;
+}
+#site-link{
+  color: rgb(17, 0, 252);
+  text-decoration: none;
+}
+#site-link:hover{
+  text-decoration: underline;
+}
+#credit-id{
+  text-align: center;
+}
+/* .btn-div{
+  background-color:red;
+  display:flex;
+  align-self: center;
+  justify-content: center;
+} */
+/* Input Range Style */
+
+input[type=range] {
+  height: 25px;
+  -webkit-appearance: none;
+  margin: 10px 0;
+  width: 100%;
+  background-color:transparent;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 0px 0px 0px #000000;
+  background: #155782;
+  border-radius: 1px;
+  border: 0px solid #000000;
+}
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 0px 0px 0px #000000;
+  border: 1px solid #2497E3;
+  height: 18px;
+  width: 18px;
+  border-radius: 25px;
+  background: #FDF2FF;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -7px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #155782;
+}
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 0px 0px 0px #000000;
+  background: #155782;
+  border-radius: 1px;
+  border: 0px solid #000000;
+}
+input[type=range]::-moz-range-thumb {
+  box-shadow: 0px 0px 0px #000000;
+  border: 1px solid #2497E3;
+  height: 18px;
+  width: 18px;
+  border-radius: 25px;
+  background: #FDF2FF;
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: #155782;
+  border: 0px solid #000000;
+  border-radius: 2px;
+  box-shadow: 0px 0px 0px #000000;
+}
+input[type=range]::-ms-fill-upper {
+  background: #155782;
+  border: 0px solid #000000;
+  border-radius: 2px;
+  box-shadow: 0px 0px 0px #000000;
+}
+input[type=range]::-ms-thumb {
+  margin-top: 1px;
+  box-shadow: 0px 0px 0px #000000;
+  border: 1px solid #2497E3;
+  height: 18px;
+  width: 18px;
+  border-radius: 25px;
+  background: #FDF2FF;
+  cursor: pointer;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #155782;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #155782;
+}
+
+
+/* Gradient Keyframes */
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .sound-icon {
+    margin: 8px;
+  }
+}
