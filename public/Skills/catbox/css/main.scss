@@ -1,0 +1,61 @@
+@import "../node_modules/nord/src/sass/nord.scss";
+
+body, html {
+  margin: 0;
+  padding: 0;
+  background-color: $nord0;
+  overflow: hidden;
+  font-family: sans-serif;
+}
+
+a {
+  color: $nord6;
+}
+
+#Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  z-index: -1;
+}
+
+#Credits {
+  color: $nord4;
+  position: fixed;
+  bottom: -20px;
+  left: 10px;
+}
+
+#About {
+  color: $nord4;
+  position: fixed;
+  text-decoration: none;
+  top: 10px;
+  right: 10px;
+}
+
+#Catalog {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 5px;
+  right: 5px;
+}
+
+.modallink {
+  color: black;
+}
+
+.closeButton {
+  background-color: red;
+}
+
+#Cat {
+  width: 25%;
+  transition: width 0.2s;
+}
+
+#Cat:hover {
+  width: 27.5%;
+}

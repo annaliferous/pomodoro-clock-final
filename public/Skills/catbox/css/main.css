@@ -1,0 +1,68 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  background-color: #2E3440;
+  overflow: hidden;
+  font-family: sans-serif;
+}
+
+a {
+  color: #ECEFF4;
+}
+
+#Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  z-index: -1;
+}
+
+#Credits {
+  color: #D8DEE9;
+  position: fixed;
+  bottom: -20px;
+  left: 10px;
+}
+
+#Reload {
+  color: #D8DEE9;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+}
+
+#About {
+  color: #D8DEE9;
+  position: fixed;
+  text-decoration: none;
+  top: 10px;
+  right: 10px;
+}
+
+#Catalog {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 5px;
+  right: 5px;
+}
+
+.modallink {
+  color: black;
+}
+
+.closeButton {
+  background-color: red;
+}
+
+#Cat {
+  width: 25%;
+  transition: width 0.2s;
+}
+
+#Cat:hover {
+  width: 27.5%;
+}
+
+/*# sourceMappingURL=main.css.map */
