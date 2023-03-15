@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soothing Sounds</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="shortcut icon" href="Images/favicon_io/favicon.ico" type="image/x-icon">
+
+    <!-- Font Awesome Icons-->
+    <script src="https://kit.fontawesome.com/65945f4f5e.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <h1>SOOTHING SOUNDS</h1>
+        <h4>Ambient sounds to relax and release stress.</h4>
+    </header>
+    <div class="container info-container">
+        <span>
+            1. Click on icons to listen sounds.<br>
+            2. Try mixing one or more sounds to get better experience.<br>
+            (&#127911; recommended for best experience)
+        </span>
+    </div>
+    <div class="container sounds-container">
+        <!-- Row 1 -->
+        <div class="row sounds-row justify-content-center">
+
+            <!-- OCEAN WAVE -->
+            <div class="col-auto sound-icon" id="ocean-card">
+                <button onclick="play(ocean); changeCardColor('ocean-card');">
+                    <audio id="ocean-aud">
+                        <source src='audio/oceanWave.mp3' type='audio/mp3' />
+                    </audio>
+                    <img src="Images/wave.png" alt="">
+                </button>
+                <br>
+                <span>Ocean Wave</span>
+                <br>
+                <input type="range" name="" id="wave-vol" min="0.0" max="1" value="0.5"
+                    onchange="changeVol(this.value, ocean)" step="0.02">
+            </div>
+
+            <!-- BIRD -->
+            <div class="col-auto sound-icon" id="bird-card">
+                <button onclick="play(bird); changeCardColor('bird-card');">
+                    <audio id="bird-aud">
+                        <source src='audio/birds.mp3' type='audio/mp3' />
+                    </audio>
+                    <img src="Images/bird.png" alt="">
+                </button>
+
+                <br>
+                <span>Birds</span>
+                <br>
+                <input type="range" name="" id="bird-vol" min="0.0" max="1" value="0.5"
+                    onchange="changeVol(this.value, bird)" step="0.02">
+            </div>
+
+            <!-- RAIN -->
+            <div class="col-auto sound-icon" id="rain-card">
+                <button onclick="play(rain); changeCardColor('rain-card');">
+                    <audio id="rain-aud">
+                        <source src="audio/rain.mp3" type="audio/mp3">
+                    </audio>
+                    <img src="Images/rain.png" alt="">
+                </button>
+                <br>
+                <span>Rain</span>
+                <br>
+                <input type="range" name="" id="rain-vol" min="0.0" max="1" value="0.5" step="0.02"
+                    onchange="changeVol(this.value, rain)">
+            </div>
+
+            <!-- THUNDERSTORM -->
+            <div class="col-auto sound-icon" id="thunder-card">
+                <button onclick="play(thunder); changeCardColor('thunder-card');">
+                    <audio id="thunder-aud">
+                        <source src="audio/thunder.mp3" type="audio/mp3">
+                    </audio>
+                    <img src="Images/storm.png" alt="">
+                </button>
+                <br>
+                <span>Thunderstorm</span>
+                <br>
+                <input type="range" name="" id="storm-vol" min="0.0" max="1" value="0.5" step="0.02"
+                    onchange="changeVol(this.value, thunder);">
+            </div>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="row sounds-row justify-content-center">
+
+            <!-- WIND -->
+            <div class="col-auto sound-icon" id="wind-card">
+                <button onclick="play(wind); changeCardColor('wind-card');">
+                    <audio id="wind-aud">
+                        <source src="audio/wind.mp3" type="audio/mp3">
+                    </audio>
+                    <img src="Images/wind (2).png" alt="" id="wind-ico">
+                </button>
+                <br>
+                <span>Wind</span>
+                <br>
+                <input type="range" name="" id="wind-vol" min="0.0" max="1" value="0.5" step="0.02"
+                    onchange="changeVol(this.value, wind);">
+            </div>
+
+            <!-- SEAGULL -->
+            <div class="col-auto sound-icon" id="seagull-card">
+                <button onclick="play(seagull); changeCardColor('seagull-card');">
+                    <audio id="seagull-aud">
+                        <source src="audio/seagull.wav" type="audio/mp3">
+                    </audio>
+                    <img src="Images/seagull.png" alt="">
+                </button>
+                <br>
+                <span>Seagull</span>
+                <br>
+                <input type="range" name="" id="seagull-vol" min="0.0" max="1" value="0.5" step="0.02"
+                    onchange="changeVol(this.value, seagull);">
+            </div>
+
+            <!-- CRICKET -->
+            <div class="col-auto sound-icon" id="cricket-card">
+                <button onclick="play(crickets); changeCardColor('cricket-card');">
+                    <audio id="cricket-aud">
+                        <source src="audio/crickets.mp3" type="audio/mp3">
+                    </audio>
+                    <img src="Images/cricket.png" alt="">
+                </button>
+                <br>
+                <span>Crickets</span>
+                <br>
+                <input type="range" name="" id="cricket-vol" min="0.0" max="1" value="0.5" step="0.02"
+                    onchange="changeVol(this.value, crickets);">
+            </div>
+
+            <!-- COFFEE SHOP -->
+            <div class="col-auto sound-icon" id="coffee-card">
+                <button onclick="play(coffee); changeCardColor('coffee-card');">
+                    <audio id="coffee-aud">
+                        <source src="audio/coffee.mp3" type="audio/mp3">
+                    </audio>
+                    <img src="Images/coffee-cup.png" alt="">
+                </button>
+                <br>
+                <span>Coffee Shop</span>
+                <br>
+                <input type="range" name="" id="wave-vol" min="0.0" max="1" value="0.5" step="0.02"
+                    onchange="changeVol(this.value, coffee);">
+            </div>
+        </div>
+
+        <!-- Row 3 -->
+        <div class="row sounds-row justify-content-center">
+
+            <!-- CAMP FIRE -->
+            <div class="col-auto sound-icon" id="camp-card">
+                <button onclick="play(campfire); changeCardColor('campfire-card');">
+                    <audio id="fire-aud">
+                        <source src="audio/campfire.mp3" type="audio/mp3">
+                    </audio>
+                    <img src="Images/bonfire.png" alt="">
+                </button>
+                <br>
+                <span>Camp Fire</span>
+                <br>
+                <input type="range" name="" id="campfire-vol" min="0.0" max="1" value="0.5" step="0.02"
+                    onchange="changeVol(this.value, campfire);">
+            </div>
+
+            <!-- KEYBOARD -->
+            <div class="col-auto sound-icon" id="keyboard-card">
+                <button onclick="play(keyboard); changeCardColor('keyboard-card');">
+                    <audio id="keyboard-aud">
+                        <source src="audio/keyboard.mp3" type="audio/mp3">
+                    </audio>
+                    <img src="Images/keyboard.png" alt="">
+                </button>
+                <br>
+                <span>Keyboard</span>
+                <br>
+                <input type="range" name="" id="keyboard-vol" min="0.0" max="1" value="0.5" step="0.02"
+                    onchange="changeVol(this.value, keyboard);">
+            </div>
+
+            <!-- WATERFALL -->
+            <div class="col-auto sound-icon" id="waterfall-card">
+                <button onclick="play(waterfall); changeCardColor('waterfall-card');">
+                    <audio id="waterfall-aud">
+                        <source src="audio/waterfall.mp3" type="audio/mp3">
+                    </audio>
+                    <img src="Images/waterfall.png" alt="">
+                </button>
+                <br>
+                <span>Waterfall</span>
+                <br>
+                <input type="range" name="" id="waterfall-vol" min="0.0" max="1" value="0.5" step="0.02"
+                    onchange="changeVol(this.value, waterfall);">
+            </div>
+
+            <!-- MEDITATION -->
+            <div class="col-auto sound-icon" id="meditate-card">
+                <button onclick="play(meditate); changeCardColor('meditate-card');">
+                    <audio id="meditate-aud">
+                        <source src="audio/meditation.mp3" type="audio/mp3">
+                    </audio>
+                    <img src="Images/meditation.png" alt="">
+                </button>
+                <br>
+                <span>Tibetan Bowl</span>
+                <br>
+                <input type="range" name="" id="storm-vol" min="0.0" max="1" value="0.5" step="0.02"
+                    onchange="changeVol(this.value, meditate);">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <p id="credit-id" style="margin: 20px;">Made with &#x2764;&#xfe0f; by <a
+                href="https://rohan-kiratsata.github.io" id="site-link">Rohan Kiratsata</a></p>
+        <p id="credit-id">You might also like : <a href="htpps://spend-ambani-fortune.fun" id="site-link">Spend Ambani
+                Fortune</a> and <a href="https://rohan-kiratsata.github.io/random-quote-generator-js/"
+                id="site-link">Inspirational Quotes</a></p>
+    </div>
+
+    <!-- todo PLAY PAUSE BUTTON -->
+    
+
+
+    <!-- JS -->
+    <script src="js/main.js"></script>
+    <!-- Bootstrap Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

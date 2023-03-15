@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  width: 90vw;
+}
+
+.panel {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  border-radius: 50px;
+  color: #fff;
+  cursor: pointer;
+  flex: 0.5;
+  margin: 10px;
+  position: relative;
+  transition: flex 0.7s ease-in;
+}
+
+.panel p{
+  font-size: 24px;
+  text-shadow: 1px 1px 2px black;
+  position: absolute;
+  top: 20%;
+  bottom: 30%;
+  left: 10%;
+  right: 10%;
+  margin: 0;
+  opacity: 0;
+  text-align: center;
+}
+
+.word{
+  font-size: 32px;
+  font-family: "Lucida Handwriting", "Brush Script MT", cursive;
+}
+
+.panel.active {
+  flex: 5;
+}
+
+.panel.active p {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+
+@media (max-width: 480px) {
+  .container {
+    flex-direction: column;
+    height: 100vh;
+  }
+
+}
