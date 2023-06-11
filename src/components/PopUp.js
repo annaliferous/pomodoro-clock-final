@@ -18,7 +18,7 @@ export default class PopUp extends Component{
                     <table >
                         <tr>
                         <td><button className='button' id='btn1' onClick={(e) => {e.preventDefault(); window.open('https://charlesstover.github.io/meditative-breathing/');}}>Breathe <br></br><font size="3">Breathe energy in. Hold. Breathe stress out.</font></button></td>
-                        <td><button className='button' id='btn2' onClick={(e) => {e.preventDefault(); window.open('/Skills/js-expanding-cards/index.html');}}> Zen Cards <br></br><font size="3">A couple adorble exercises for every time of the day!</font></button></td>
+                        <td><button className='button' id='btn2' onClick={(e) => {e.preventDefault(); window.open('Skills/js-expanding-cards/index.html');}}> Zen Cards <br></br><font size="3">A couple adorble exercises for every time of the day!</font></button></td>
                         <td><button className='button' id='btn3' onClick={(e) => {e.preventDefault(); window.open('Skills/memory-game/memory-game.html');}}> Memory <br></br><font size="3">You are never to old for memory!</font> </button></td>
                         </tr>
                         <tr>
